@@ -4,6 +4,7 @@ public abstract class Personaje implements Combatiente {
     private int vida;
     private int vidaMaxima;
     private int ataque;
+    self.inventario = Inventario()
 
 
     public Personaje(String nombre, int nivel, int vida, int vidaMaxima, int ataque) {

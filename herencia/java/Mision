@@ -1,0 +1,29 @@
+public class Mision {
+    private String nombre;
+    private String descripcion;
+    private int nivelRequerido;
+
+    public Mision(String nombre, String descripcion, int nivelRequerido) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.nivelRequerido = nivelRequerido;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public int getNivelRequerido() {
+        return nivelRequerido;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Misión: %s - %s (Nivel requerido: %d)", 
+                             nombre, descripcion, nivelRequerido);
+    }
+}
