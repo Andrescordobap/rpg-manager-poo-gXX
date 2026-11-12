@@ -1,0 +1,12 @@
+class Mision:
+    def __init__(self, nombre: str, descripcion: str):
+        self.nombre = nombre
+        self.descripcion = descripcion
+
+    def agregar_personaje(self, personaje):
+        if not hasattr(self, 'personajes'):
+            self.personajes = []
+        self.personajes.append(personaje)
+    def __str__(self) -> str:
+        return f"Mision(nombre={self.nombre}, descripcion={self.descripcion}(peronajes={len(self, 'personajes', [])}))"
+   
