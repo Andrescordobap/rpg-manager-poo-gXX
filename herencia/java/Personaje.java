@@ -5,6 +5,7 @@ public class Personaje {
     private int vidaMaxima;
     private int ataque;
 
+
     public Personaje(String nombre, int nivel, int vida, int vidaMaxima, int ataque) {
         this.nombre = nombre;
         this.nivel = nivel;
