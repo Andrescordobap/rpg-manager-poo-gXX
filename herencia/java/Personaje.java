@@ -1,4 +1,4 @@
-public abstract class Personaje {
+public abstract class Personaje implements Combatiente {
     private String nombre;
     private int nivel;
     private int vida;
@@ -36,7 +36,7 @@ public abstract class Personaje {
         return this.getVida() > 0;
     }
 
-    public void atacar(Personaje objetivo) {
+    public void atacar(Combatiente objetivo) {
         objetivo.recibirDano(this.ataque);
     }
 

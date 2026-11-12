@@ -11,7 +11,7 @@ public class Mago extends Personaje {
     }
 
     @Override
-    public void atacar(Personaje objetivo) {
+    public void atacar(Combatiente objetivo) {
         int costoMana = 5;
 
         if (this.mana >= costoMana) {
@@ -23,9 +23,7 @@ public class Mago extends Personaje {
         }
     }
 
-    @Override
-    public void atacar(Personaje objetivo, Hechizo hechizo) {
-
+    public void atacar(Combatiente objetivo, Hechizo hechizo) {
         if (this.mana >= hechizo.getCostoMana()) {
             this.mana -= hechizo.getCostoMana();
             objetivo.recibirDano(hechizo.getDanio());

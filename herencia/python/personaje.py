@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from combatiente import Combatiente
 
 
 class Personaje(ABC):
@@ -28,7 +29,7 @@ class Personaje(ABC):
     def esta_vivo(self):
         return self.vida > 0
 
-    def atacar(self, objetivo):
+    def atacar(self, objetivo: Combatiente):
         objetivo.recibir_dano(self.__ataque)
 
     @abstractmethod

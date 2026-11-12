@@ -14,7 +14,7 @@ public class Principal {
 
         Mago mi_mago = new Mago("Gandalf", 10, 100, 100, 20);
         Guerrero enemigo = new Guerrero("Orco", 5, 50, 50, 10);
-        mi_mago.atacar(enemigo, new Hechizo("Bola de Fuego", 5));
+        mi_mago.atacar(enemigo, new Hechizo("Bola de Fuego", 5, 3));
 
         System.out.println("\nDespués del ataque:");
         System.out.println(orco);
