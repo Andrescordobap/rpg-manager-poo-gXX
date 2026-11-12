@@ -5,6 +5,9 @@ class Mago(Personaje):
         super().__init__(nombre, nivel, vida, vida_maxima, ataque)
         self.mana = 15
 
+    def habilidad_especial(self):
+        print("¡El Mago invoca su magia!")
+
     def atacar(self, objetivo, hechizo=None):
         if hechizo is None:
             super().atacar(objetivo)

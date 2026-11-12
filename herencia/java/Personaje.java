@@ -1,4 +1,4 @@
-public class Personaje {
+public abstract class Personaje {
     private String nombre;
     private int nivel;
     private int vida;
@@ -39,6 +39,8 @@ public class Personaje {
     public void atacar(Personaje objetivo) {
         objetivo.recibirDano(this.ataque);
     }
+
+    public abstract void habilidadEspecial();
 
     @Override
     public String toString() {

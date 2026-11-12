@@ -6,6 +6,11 @@ public class Mago extends Personaje {
     }
 
     @Override
+    public void habilidadEspecial() {
+        System.out.println("¡El Mago invoca su magia!");
+    }
+
+    @Override
     public void atacar(Personaje objetivo) {
         int costoMana = 5;
 
@@ -15,6 +20,18 @@ public class Mago extends Personaje {
             System.out.println("¡El Mago lanza un hechizo exitoso!");
         } else {
             System.out.println("¡El Mago se quedó sin maná y no puede atacar!");
+        }
+    }
+
+    @Override
+    public void atacar(Personaje objetivo, Hechizo hechizo) {
+
+        if (this.mana >= hechizo.getCostoMana()) {
+            this.mana -= hechizo.getCostoMana();
+            objetivo.recibirDano(hechizo.getDanio());
+            System.out.println("¡El Mago lanza el hechizo " + hechizo.getNombre() + " exitosamente!");
+        } else {
+            System.out.println("¡El Mago se quedó sin maná y no puede lanzar el hechizo " + hechizo.getNombre() + "!");
         }
     }
 }

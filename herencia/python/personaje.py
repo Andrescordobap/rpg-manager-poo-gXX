@@ -1,4 +1,7 @@
-class Personaje:
+from abc import ABC, abstractmethod
+
+
+class Personaje(ABC):
     def __init__(self, nombre, nivel, vida, vida_maxima, ataque):
         self.__nombre = nombre
         self.__nivel = nivel
@@ -27,6 +30,10 @@ class Personaje:
 
     def atacar(self, objetivo):
         objetivo.recibir_dano(self.__ataque)
+
+    @abstractmethod
+    def habilidad_especial(self):
+        pass
 
     def __str__(self):
         return f"{self.__nombre} (LVL {self.__nivel}) - Vida: {self.vida}/{self.__vida_maxima}"

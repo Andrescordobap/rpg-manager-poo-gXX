@@ -10,6 +10,11 @@ public class Guerrero extends Personaje {
     }
 
     @Override
+    public void habilidadEspecial() {
+        System.out.println("¡El Guerrero usa su fuerza en una habilidad especial!");
+    }
+
+    @Override
     public void recibirDano(int cantidad) {
         int danoReal = cantidad - this.armadura;
 

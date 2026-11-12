@@ -1,4 +1,5 @@
 from personaje import Personaje
 
 class Guerrero(Personaje): 
-    pass
+    def habilidad_especial(self):
+        print("¡El Guerrero usa su fuerza en una habilidad especial!")
